@@ -1,24 +1,85 @@
 <img src="./logo.png" width="180">
 
-# ग्राम संवाद दर्पण
-🔴 GRAM SAMVAD DARPAN NEWS
+<!DOCTYPE html>
+<html>
+<head>
+<title>ग्राम संवाद दर्पण</title>
 
-✨ गाँव से लेकर देश-दुनिया तक की ताज़ा खबरें ✨
-स्वागत है हमारे ऑनलाइन न्यूज़ पेपर में।
-यहाँ आपको रोज़ की नई खबरें, स्थानीय समाचार और महत्वपूर्ण जानकारी मिलेगी।
-## 🔴 ताज़ा खबरें
+<style>
+body{
+font-family: Arial, sans-serif;
+background:#f2f2f2;
+margin:0;
+}
 
-स्वागत है हमारे ऑनलाइन न्यूज़ पेपर में।  
-यहाँ रोज़ की ताज़ा खबरें पढ़ें।
+header{
+background:#8b0000;
+color:white;
+text-align:center;
+padding:20px;
+}
 
-## 🇮🇳 देश की खबरें
-आज की मुख्य खबरें यहाँ मिलेंगी।
+.logo{
+width:180px;
+}
 
-## 🌍 दुनिया
-दुनिया की बड़ी खबरें यहाँ पढ़ें।
+h1{
+font-size:32px;
+}
 
-## 🏏 खेल
-खेल जगत की खबरें।
+.news{
+background:white;
+margin:15px;
+padding:15px;
+border-radius:10px;
+}
 
----
-© 2026 Newspaper
+h2{
+color:#8b0000;
+}
+
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<img src="./logo.png" class="logo">
+<h1>📰 ग्राम संवाद दर्पण</h1>
+<p>आपके गांव की अपनी खबर</p>
+</header>
+
+<div class="news">
+<h2>आज की मुख्य खबर</h2>
+<p>
+ग्राम संवाद दर्पण में आपका स्वागत है। यहां अपने क्षेत्र की ताजा खबरें पढ़ें।
+</p>
+</div>
+
+<div class="news">
+<h2>गांव समाचार</h2>
+<p>
+स्थानीय खबरें, विकास कार्य और जनता से जुड़ी जानकारी।
+</p>
+</div>
+
+<div class="news">
+<h2>देश-दुनिया</h2>
+<p>
+देश और दुनिया की बड़ी खबरें।
+</p>
+</div>
+
+<footer>
+© 2026 ग्राम संवाद दर्पण
+</footer>
+
+</body>
+</html>
