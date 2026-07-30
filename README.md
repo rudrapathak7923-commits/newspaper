@@ -3,84 +3,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ग्राम संवाद दर्पण</title>
+    <title>ग्राम संवाद दर्पण - मुख्य पृष्ठ</title>
+    <!-- Google Fonts for Clean Hindi Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        body { 
-            font-family: Arial, sans-serif; 
-            background: #f2f2f2; 
-            margin: 0; 
+        /* Global Styles */
+        * {
+            margin: 0;
             padding: 0;
-        } 
-        header { 
-            background: #8b0000; 
-            color: white; 
-            text-align: center; 
-            padding: 20px; 
-        } 
-        .logo { 
-            width: 180px; 
-            margin-bottom: 10px;
-        } 
-        h1 { 
-            margin: 5px 0 0 0;
-            font-size: 32px; 
-        } 
-        .tagline {
-            font-style: italic;
-            font-size: 16px;
-            margin-top: 5px;
-            color: #ffcccc;
+            box-sizing: border-box;
         }
+        body {
+            font-family: 'Noto Serif Devanagari', serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header & Logo Area */
+        header {
+            background-color: #fff;
+            padding: 20px 10px;
+            text-align: center;
+            border-bottom: 4px solid #c0392b;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .logo-container img {
+            max-width: 180px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .site-title {
+            font-size: 2.5rem;
+            color: #c0392b;
+            font-weight: 700;
+            margin-top: 5px;
+            letter-spacing: 1px;
+        }
+        .tagline {
+            font-size: 1.1rem;
+            color: #555;
+            font-style: italic;
+            margin-top: 5px;
+        }
+
+        /* Breaking News Ticker */
+        .ticker-wrap {
+            background-color: #2c3e50;
+            color: #fff;
+            overflow: hidden;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .ticker-title {
+            background-color: #c0392b;
+            padding: 0 20px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            font-family: 'Poppins', sans-serif;
+            white-space: nowrap;
+            z-index: 2;
+        }
+        .ticker {
+            display: inline-block;
+            white-space: nowrap;
+            padding-left: 100%;
+            animation: marquee 20s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-100%, 0, 0); }
+        }
+        .ticker-item {
+            display: inline-block;
+            padding: 0 2rem;
+            font-size: 1.1rem;
+        }
+
+        /* Main Content */
         .container {
-            max-width: 800px;
-            margin: 20px auto;
+            max-width: 1200px;
+            margin: 30px auto;
             padding: 0 15px;
         }
-        .news { 
-            background: white; 
-            margin: 15px 0; 
-            padding: 15px; 
-            border-radius: 10px; 
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        } 
-        h2 { 
-            color: #8b0000; 
-            margin-top: 0;
-            border-bottom: 2px solid #f2f2f2;
-            padding-bottom: 8px;
-        } 
-        footer { 
-            background: #222; 
-            color: white; 
-            text-align: center; 
-            padding: 15px; 
-            margin-top: 40px;
+        .newspaper-main {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        .newspaper-image-wrapper {
+            position: relative;
+            display: inline-block;
+            max-width: 100%;
+            border: 5px solid #fff;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            border-radius: 4px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .newspaper-image-wrapper:hover {
+            transform: scale(1.01);
+        }
+        .newspaper-pic {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            display: block;
+        }
+
+        /* Social Link Button */
+        .fb-btn-container {
+            margin-top: 25px;
+        }
+        .fb-link-btn {
+            display: inline-block;
+            background-color: #1877f2;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 30px;
+            font-size: 1.2rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            border-radius: 30px;
+            box-shadow: 0 4px 10px rgba(24, 119, 242, 0.3);
+            transition: all 0.3s ease;
+        }
+        .fb-link-btn:hover {
+            background-color: #145dbf;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(24, 119, 242, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 20px 10px;
+            margin-top: 50px;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Friendly Responsive Design */
+        @media (max-width: 768px) {
+            .site-title {
+                font-size: 1.8rem;
+            }
+            .tagline {
+                font-size: 0.9rem;
+            }
+            .fb-link-btn {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+            .ticker-item {
+                font-size: 0.95rem;
+            }
         }
     </style>
 </head>
 <body>
 
+    <!-- Header Section -->
     <header>
-        <!-- यहाँ आपकी इमेज (लोगो) बिल्कुल सही तरीके से लोड होगी -->
-        <img src="./logo.png" class="logo" alt="लोगो">
-        <h1>ग्राम संवाद दर्पण</h1>
-        <p class="tagline">आपके गांव की अपनी खबर</p>
+        <div class="logo-container">
+            <!-- आपका लोगो (logo.png) यहाँ लोड होगा -->
+            <img src="logo.png" alt="ग्राम संवाद दर्पण लोगो">
+        </div>
+        <div class="site-title">ग्राम संवाद दर्पण</div>
+        <div class="tagline">ग्रामीण भारत की आवाज़, निष्पक्ष पत्रकारिता</div>
     </header>
 
-    <div class="container">
-        <div class="news">
-            <h2>आज की मुख्य खबर</h2>
-            <p>ग्राम संवाद दर्पण में आपका स्वागत है। यहां अपने क्षेत्र की ताजा खबरें पढ़ें।</p>
-        </div>
-
-        <div class="news">
-            <h2>गांव समाचार</h2>
-            <p>स्थानीय खबरें, विकास कार्य और जनता से जुड़ी जानकारी।</p>
+    <!-- Breaking News Ticker -->
+    <div class="ticker-wrap">
+        <div class="ticker-title">ब्रेकिंग न्यूज़</div>
+        <div class="ticker">
+            <span class="ticker-item">● ग्राम संवाद दर्पण का डिजिटल संस्करण अब लाइव है!</span>
+            <span class="ticker-item">● देश और ग्रामीण क्षेत्र की ताज़ा ख़बरों के लिए हमारे साथ जुड़ें।</span>
+            <span class="ticker-item">● ताज़ा अंक देखने के लिए नीचे दिए गए फेसबुक लिंक पर क्लिक करें।</span>
         </div>
     </div>
 
+    <!-- Main Body Content -->
+    <div class="container">
+        <main class="newspaper-main">
+            <h2>आज का मुख्य अंक</h2>
+            <p style="color: #666; margin-bottom: 20px;">ताज़ा समाचार और विस्तृत रिपोर्ट नीचे देखें</p>
+            
+            <!-- अख़बार की मुख्य तस्वीर -->
+            <div class="newspaper-image-wrapper">
+                <img src="newspaper.jpg" alt="ग्राम संवाद दर्पण अख़बार अंक" class="newspaper-pic">
+            </div>
+
+            <!-- फेसबुक लिंक बटन -->
+            <div class="fb-btn-container">
+                <a href="https://www.facebook.com/share/1NrX6h9WoV/" target="_blank" class="fb-link-btn">
+                    फेसबुक पर हमारे साथ जुड़ें (Facebook Link)
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 ग्राम संवाद दर्पण. सभी अधिकार सुरक्षित।</p>
+        <p>&copy; 2026 ग्राम संवाद दर्पण. सर्वाधिकार सुरक्षित।</p>
     </footer>
 
 </body>
