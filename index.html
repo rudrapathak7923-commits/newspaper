@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>विक्की बाबू समाचार दर्पण - डिजिटल संस्करण</title>
+    <title>ग्राम संवाद दर्पण - डिजिटल संस्करण</title>
     <!-- Google Fonts for Clean Hindi Typography -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
@@ -45,19 +45,26 @@
             font-style: italic;
             margin-top: 3px;
         }
+        .editor-info {
+            font-size: 1.15rem;
+            color: #2c3e50;
+            font-weight: bold;
+            margin-top: 8px;
+            font-family: 'Poppins', sans-serif;
+        }
         /* Professional Notice Banner */
         .pro-notice-banner {
             background: linear-gradient(135deg, #1e3799, #0984e3);
             color: #fff;
             text-align: center;
-            padding: 12px 15px;
-            font-size: 1.15rem;
+            padding: 14px 15px;
+            font-size: 1.2rem;
             font-family: 'Poppins', sans-serif;
             font-weight: 600;
             box-shadow: 0 2px 8px rgba(0,0,0,0.15);
             letter-spacing: 0.5px;
         }
-        /* Breaking News Ticker */
+        /* Breaking News Ticker with Moving Link */
         .ticker-wrap {
             background-color: #2c3e50;
             color: #fff;
@@ -105,22 +112,12 @@
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             text-align: center;
+            margin-bottom: 30px;
         }
         .newspaper-main h2 {
             font-size: 1.8rem;
             color: #2c3e50;
-            margin-bottom: 5px;
-        }
-        .paper-date-badge {
-            display: inline-block;
-            background-color: #e74c3c;
-            color: white;
-            padding: 6px 18px;
-            border-radius: 20px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            margin-bottom: 20px;
-            font-family: 'Poppins', sans-serif;
+            margin-bottom: 15px;
         }
         .newspaper-image-wrapper {
             position: relative;
@@ -140,6 +137,45 @@
             max-width: 800px;
             height: auto;
             display: block;
+        }
+        /* Archive / Other News Section */
+        .archive-section {
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-top: 30px;
+        }
+        .archive-section h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #c0392b;
+            padding-bottom: 8px;
+            font-size: 1.4rem;
+        }
+        .archive-list {
+            list-style: none;
+            padding: 0;
+        }
+        .archive-item {
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            background: #fdfdfd;
+            border-left: 4px solid #1877f2;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 0 4px 4px 0;
+        }
+        .archive-item a {
+            color: #1877f2;
+            text-decoration: none;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+        }
+        .archive-item a:hover {
+            text-decoration: underline;
         }
         /* Social Link Button */
         .fb-btn-container {
@@ -178,7 +214,7 @@
                 font-size: 1.8rem;
             }
             .pro-notice-banner {
-                font-size: 0.95rem;
+                font-size: 1rem;
                 padding: 10px;
             }
             .tagline {
@@ -191,6 +227,11 @@
             .ticker-item {
                 font-size: 0.95rem;
             }
+            .archive-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
         }
     </style>
 </head>
@@ -199,40 +240,38 @@
     <!-- Header Section -->
     <header>
         <div class="logo-container">
-            <img src="https://raw.githubusercontent.com/rudrapathak7923-commits/newspaper/main/logo.png" alt="विक्की बाबू समाचार दर्पण">
+            <img src="https://raw.githubusercontent.com/rudrapathak7923-commits/newspaper/main/logo.png" alt="ग्राम संवाद दर्पण">
         </div>
-        <div class="site-title">विक्की बाबू समाचार दर्पण</div>
-        <div class="tagline">राष्ट्रीय भारत की आवाज, निष्पक्ष पत्रकारिता</div>
-        <div class="editor-name" style="font-size: 1.2rem; color: #c0392b; font-weight: bold; margin-top: 8px;">संपादक: विक्की बाबू पाठक जी</div>
+        <div class="site-title">ग्राम संवाद दर्पण</div>
+        <div class="tagline">ग्रामीण भारत की आवाज़, निष्पक्ष पत्रकारिता</div>
+        <div class="editor-info">Editor: Rudra Pathak (Vicky)</div>
     </header>
 
     <!-- Professional Notice Bar -->
     <div class="pro-notice-banner">
-        ✨ प्रोफेशनल न्यूज़ या समाचार पढ़ने के लिए नीचे चल रहे लिंक पर क्लिक करें! ✨
+        📢 प्रोफेशनल न्यूज़ या समाचार पढ़ने के लिए नीचे चल रहे लिंक पर क्लिक करें!
     </div>
 
-    <!-- Breaking News Ticker with Date and Direct Clickable Link -->
+    <!-- Breaking News Ticker with Moving Direct Clickable Link -->
     <div class="ticker-wrap">
         <div class="ticker-title">ताज़ा अपडेट</div>
         <div class="ticker">
-            <span class="ticker-item">📰 विक्की बाबू समाचार दर्पण का डिजिटल संस्करण अब लाइव है!</span>
-            <span class="ticker-item">📅 आज का पेपर दिनांक: 31 जुलाई 2026</span>
-            <span class="ticker-item">👉 देश और धर्म की ताज़ा खबरों के लिए हमारे साथ जुड़े रहें!</span>
-            <span class="ticker-item">🔥 पूरा न्यूज़ पेपर पढ़ने के लिए यहाँ क्लिक करें: <a href="https://rudrapathak7923-commits.github.io/newspaper/" target="_blank" style="color: #ffeb3b; text-decoration: underline; font-weight: bold;">यहाँ क्लिक करें (Click Here)</a></span>
+            <span class="ticker-item">📰 ग्राम संवाद दर्पण का डिजिटल संस्करण लाइव है!</span>
+            <span class="ticker-item">👉 सच्ची खबर और निष्पक्ष खबर के लिए हमारे साथ जुड़े रहें!</span>
+            <span class="ticker-item">🔥 पूरा न्यूज़ पेपर और मुख्य समाचार पढ़ने के लिए यहाँ क्लिक करें: <a href="https://rudrapathak7923-commits.github.io/newspaper/" target="_blank" style="color: #ffeb3b; text-decoration: underline; font-weight: bold;">यहाँ क्लिक करें (Click Here)</a></span>
         </div>
     </div>
 
     <!-- Main Body Content -->
     <div class="container">
+        <!-- आज का मुख्य पेपर -->
         <main class="newspaper-main">
-            <h2>📰 आज का मुख्य समाचार संस्करण</h2>
-            <!-- साफ़-साफ़ हाइलाइटेड तारीख जो पेपर पर है -->
-            <div class="paper-date-badge">📅 दिनांक: 31 जुलाई 2026</div>
-            <p style="color: #666; margin-bottom: 20px;">आज के ताज़ा अंक का मुख्य पृष्ठ नीचे देखें</p>
+            <h2>📰 अखबार का मुख्य अंक</h2>
+            <p style="color: #666; margin-bottom: 20px;">ताज़ा समाचार और विस्तृत रिपोर्ट नीचे देखें</p>
             
             <!-- अखबार की मुख्य तस्वीर -->
             <div class="newspaper-image-wrapper">
-                <img src="https://raw.githubusercontent.com/rudrapathak7923-commits/newspaper/main/logo.png" alt="आज का न्यूज़पेपर" class="newspaper-pic">
+                <img src="https://raw.githubusercontent.com/rudrapathak7923-commits/newspaper/main/logo.png" alt="ग्राम संवाद दर्पण न्यूज़पेपर" class="newspaper-pic">
             </div>
 
             <!-- फेसबुक लिंक बटन -->
@@ -242,11 +281,23 @@
                 </a>
             </div>
         </main>
+
+        <!-- पुरानी या अन्य खबरें देखने के लिए सेक्शन -->
+        <section class="archive-section">
+            <h3>📂 अन्य और पुरानी खबरें (Archive & Other News)</h3>
+            <p style="color: #666; margin-bottom: 15px; font-size: 0.95rem;">यदि आप पिछले अंक या अन्य खबरें पढ़ना चाहते हैं, तो नीचे सूची में से चयन करें:</p>
+            <ul class="archive-list">
+                <li class="archive-item">
+                    <span>📰 मुख्य समाचार अंक (डिजिटल संस्करण)</span>
+                    <a href="https://rudrapathak7923-commits.github.io/newspaper/" target="_blank">पेपर खोलें &rarr;</a>
+                </li>
+            </ul>
+        </section>
     </div>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 विक्की बाबू समाचार दर्पण. सर्वाधिकार सुरक्षित।</p>
+        <p>&copy; 2026 ग्राम संवाद दर्पण. सर्वाधिकार सुरक्षित।</p>
     </footer>
 
 </body>
