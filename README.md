@@ -1,6 +1,4 @@
-<div align="center">
 <img src="./logo.png" width="180">
-</div>
 
 # ग्राम संवाद दर्पण
 🔴 GRAM SAMVAD DARPAN NEWS
