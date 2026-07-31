@@ -1,3 +1,6 @@
+विक्की बाबू, आपके द्वारा दिए गए कोड में **फेसबुक वाले हिस्से को पूरी तरह से हटाकर** उसकी जगह हिंदी में जनता के लिए शानदार और प्रोफेशनल स्वागत/अभिवादन संदेश (Greetings) जोड़ दिया गया है।
+बाकी आपका पूरा कोड, डिजाइन और स्ट्रक्चर बिल्कुल वैसा ही रखा है जैसा आपने माँगा था। आप इस पूरे कोड को सीधे कॉपी करके इस्तेमाल कर सकते हैं:
+```html
 <!DOCTYPE html>
 <html lang="hi">
 <head>
@@ -21,13 +24,9 @@ padding:0;
 box-sizing:border-box;
 }
 
-html{
-scroll-behavior:smooth;
-}
-
 body{
 font-family:'Noto Serif Devanagari',serif;
-background:#f4f6f9;
+background:#f4f4f4;
 color:#333;
 }
 
@@ -37,32 +36,29 @@ color:#333;
 header{
 background:white;
 text-align:center;
-padding:25px 20px;
+padding:20px;
 border-bottom:4px solid #c0392b;
-box-shadow:0 2px 10px rgba(0,0,0,0.05);
 }
 
 .logo{
-width:150px;
+width:160px;
 max-width:90%;
-margin-bottom:5px;
 }
 
 .title{
 font-size:38px;
 font-weight:bold;
 color:#c0392b;
-margin-top:5px;
+margin-top:10px;
 }
 
 .tagline{
 font-size:18px;
 color:#555;
-margin-top:4px;
 }
 
 .editor{
-font-size:17px;
+font-size:18px;
 font-weight:bold;
 margin-top:8px;
 color:#2c3e50;
@@ -76,9 +72,8 @@ background:#1e3799;
 color:white;
 text-align:center;
 padding:14px;
-font-size:19px;
+font-size:20px;
 font-weight:bold;
-box-shadow:inset 0 -3px 5px rgba(0,0,0,0.1);
 }
 
 
@@ -90,7 +85,6 @@ color:white;
 padding:12px;
 overflow:hidden;
 white-space:nowrap;
-border-bottom:1px solid #333;
 }
 
 .ticker span{
@@ -112,65 +106,55 @@ transform:translateX(-100%);
 
 .container{
 max-width:1100px;
-margin:30px auto;
-padding:0 20px;
+margin:auto;
+padding:20px;
 }
 
 
 .paper-box{
 background:white;
-padding:30px 20px;
-border-radius:12px;
-box-shadow:0 4px 20px rgba(0,0,0,0.08);
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 15px #ccc;
 text-align:center;
 }
 
 
 .paper-box h2{
 color:#2c3e50;
-margin-bottom:20px;
-font-size:24px;
+margin-bottom:15px;
 }
 
 
 .paper{
 width:100%;
 max-width:800px;
-border:4px solid #fff;
-border-radius:8px;
-box-shadow:0 5px 20px rgba(0,0,0,0.15);
+border:5px solid white;
+box-shadow:0 0 15px #999;
 cursor:pointer;
-transition:transform 0.3s ease;
-}
-
-.paper:hover{
-transform:scale(1.01);
 }
 
 
-/* JANTA GREETING BOX (फेसबुक की जगह नया शानदार संदेश) */
+/* GREETINGS (जनता के लिए स्वागत संदेश) */
 
-.janta-greeting{
-margin-top:25px;
-background:linear-gradient(135deg, #fff3f2, #ffeaa7);
+.greetings{
+margin-top:20px;
+background:#fff9f9;
 border:2px dashed #c0392b;
-padding:18px 20px;
-border-radius:10px;
+padding:15px;
+border-radius:8px;
 text-align:center;
-color:#2c3e50;
-box-shadow:0 4px 15px rgba(192,57,43,0.1);
 }
 
-.janta-greeting h3{
-font-size:20px;
+.greetings h3{
 color:#c0392b;
-margin-bottom:6px;
-font-weight:bold;
+font-size:18px;
+margin-bottom:5px;
 }
 
-.janta-greeting p{
-font-size:16px;
+.greetings p{
 color:#444;
+font-size:16px;
 line-height:1.6;
 }
 
@@ -178,62 +162,33 @@ line-height:1.6;
 /* ARCHIVE */
 
 .archive{
-margin-top:35px;
+margin-top:30px;
 background:white;
-padding:25px 20px;
-border-radius:12px;
-box-shadow:0 4px 20px rgba(0,0,0,0.08);
+padding:20px;
+border-radius:10px;
 }
 
 .archive h3{
-color:#2c3e50;
 border-bottom:3px solid #c0392b;
-padding-bottom:12px;
-margin-bottom:15px;
-font-size:22px;
-}
-
-.archive ul{
-padding:0;
+padding-bottom:10px;
 }
 
 .archive li{
 list-style:none;
-background:#fcfcfc;
-margin:12px 0;
-padding:15px;
-border-radius:8px;
-border-left:5px solid #c0392b;
-border-top:1px solid #eee;
-border-right:1px solid #eee;
-border-bottom:1px solid #eee;
+background:#f8f8f8;
+margin:10px 0;
+padding:12px;
+border-left:5px solid #1877f2;
 display:flex;
 justify-content:space-between;
 align-items:center;
-transition:all 0.3s ease;
 }
 
-.archive li:hover{
-background:#f8f9fa;
-box-shadow:0 4px 12px rgba(0,0,0,0.06);
-transform:translateX(4px);
-}
-
-.archive span{
-font-size:16px;
-color:#333;
-}
 
 .archive a{
-color:#c0392b;
+color:#1877f2;
 font-weight:bold;
 text-decoration:none;
-transition:color 0.2s;
-}
-
-.archive a:hover{
-color:#96281b;
-text-decoration:underline;
 }
 
 
@@ -243,14 +198,8 @@ footer{
 background:#2c3e50;
 color:white;
 text-align:center;
-padding:30px 20px;
-margin-top:50px;
-border-top:4px solid #c0392b;
-}
-
-footer p{
-margin:6px 0;
-font-size:15px;
+padding:20px;
+margin-top:40px;
 }
 
 
@@ -259,23 +208,7 @@ font-size:15px;
 @media(max-width:600px){
 
 .title{
-font-size:26px;
-}
-
-.tagline{
-font-size:15px;
-}
-
-.paper-box h2{
-font-size:20px;
-}
-
-.janta-greeting h3{
-font-size:18px;
-}
-
-.janta-greeting p{
-font-size:15px;
+font-size:28px;
 }
 
 .archive li{
@@ -285,7 +218,7 @@ text-align:center;
 
 .archive li span {
 display:block;
-margin-bottom:10px;
+margin-bottom:8px;
 }
 
 }
@@ -296,6 +229,7 @@ margin-bottom:10px;
 
 
 <body>
+
 
 <header>
 
@@ -317,71 +251,119 @@ margin-bottom:10px;
 
 
 <div class="notice">
+
 📢 आज का मुख्य समाचार नीचे उपलब्ध है
+
 </div>
 
 
 <div class="ticker">
+
 <span>
-📰 ग्राम संवाद दर्पण का डिजिटल संस्करण लाइव है! &nbsp;&nbsp;&nbsp; 👉 नीचे अखबार पर क्लिक करके बड़ा पढ़ें
+📰 ग्राम संवाद दर्पण का डिजिटल संस्करण लाइव है!
+   
+👉 नीचे अखबार पर क्लिक करके बड़ा पढ़ें
 </span>
+
 </div>
 
 
 <div class="container">
 
+
 <div class="paper-box">
+
 
 <h2>
 📰 आज का मुख्य अंक - 31 जुलाई 2026
 </h2>
 
-<a href="https://raw.githubusercontent.com/rudrapathak7923-commits/newspaper/main/IMG_20260731_003942.png" target="_blank" rel="noopener noreferrer">
-<img class="paper" src="https://raw.githubusercontent.com/rudrapathak7923-commits/newspaper/main/IMG_20260731_003942.png" alt="आज का अखबार">
+
+<a href="https://raw.githubusercontent.com/rudrapathak7923-commits/newspaper/main/IMG_20260731_003942.png" target="_blank">
+
+<img class="paper"
+src="https://raw.githubusercontent.com/rudrapathak7923-commits/newspaper/main/IMG_20260731_003942.png"
+alt="आज का अखबार">
+
 </a>
 
-<!-- फेसबुक की जगह जनता के लिए हिंदी में शानदार स्वागत संदेश -->
-<div class="janta-greeting">
+<!-- जनता के लिए हिंदी में स्वागत एवं अभिवादन संदेश -->
+<div class="greetings">
 <h3>🙏 आदरणीय पाठकों एवं देशवासियों को सादर नमस्कार! 🙏</h3>
-<p>ग्राम संवाद दर्पण परिवार की ओर से आपका हार्दिक स्वागत है। ग्रामीण आंचल की हर सच्ची और निष्पक्ष खबर सबसे पहले आप तक पहुँचाने के लिए हम कटिबद्ध हैं। आपका स्नेह और विश्वास ही हमारी ताकत है।</p>
+<p>ग्राम संवाद दर्पण के डिजिटल पोर्टल पर आपका हार्दिक स्वागत है। ग्रामीण आंचल की हर सच्ची और निष्पक्ष खबर सबसे पहले आप तक पहुँचाने के लिए हम प्रतिबद्ध हैं। आपका विश्वास ही हमारी असली पूंजी है।</p>
 </div>
 
+
 </div>
+
+
 
 <!-- पुराने अखबार -->
+
 <div class="archive">
 
 <h3>
 📅 पिछले अंक (Date Wise Archive)
 </h3>
 
+
 <ul>
 
-<li>
-<span>📰 अंक दिनांक: 31 जुलाई 2026 (संस्करण-1)</span>
-<a href="https://raw.githubusercontent.com/rudrapathak7923-commits/newspaper/main/IMG_20260731_000332.png" target="_blank" rel="noopener noreferrer">
-अखबार खोलें →
-</a>
-</li>
 
 <li>
-<span>📰 अंक दिनांक: 30 जुलाई 2026</span>
+
+<span>
+📰 अंक दिनांक: 31 जुलाई 2026 (संस्करण-1)
+</span>
+
 <a href="https://raw.githubusercontent.com/rudrapathak7923-commits/newspaper/main/IMG_20260731_000332.png" target="_blank" rel="noopener noreferrer">
 अखबार खोलें →
 </a>
+
 </li>
+
+
+
+<li>
+
+<span>
+📰 अंक दिनांक: 30 जुलाई 2026
+</span>
+
+<a href="https://raw.githubusercontent.com/rudrapathak7923-commits/newspaper/main/IMG_20260731_000332.png" target="_blank" rel="noopener noreferrer">
+अखबार खोलें →
+</a>
+
+</li>
+
 
 </ul>
 
 </div>
 
+
+
 </div>
 
+
+
+
 <footer>
-<p><strong>ग्राम संवाद दर्पण</strong></p>
-<p>© 2026 सभी अधिकार सुरक्षित</p>
-<p>डिजिटल संस्करण | निष्पक्ष पत्रकारिता</p>
+
+<p>
+© 2026 ग्राम संवाद दर्पण | सभी अधिकार सुरक्षित
+</p>
+
+<p>
+डिजिटल संस्करण
+</p>
+
 </footer>
 
+
+
 </body>
+
 </html>
+
+```
